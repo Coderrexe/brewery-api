@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct AutocompleteResult: Codable {
+    let id: String
+    let name: String
+}

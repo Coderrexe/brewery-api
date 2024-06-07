@@ -14,6 +14,10 @@
 		7CC022512C0F0FDF006FC857 /* brewery_apiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC022502C0F0FDF006FC857 /* brewery_apiTests.swift */; };
 		7CC0225B2C0F0FDF006FC857 /* brewery_apiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0225A2C0F0FDF006FC857 /* brewery_apiUITests.swift */; };
 		7CC0225D2C0F0FDF006FC857 /* brewery_apiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0225C2C0F0FDF006FC857 /* brewery_apiUITestsLaunchTests.swift */; };
+		7CC0226B2C0F10C1006FC857 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0226A2C0F10C1006FC857 /* ApiManager.swift */; };
+		7CC0226E2C0F13A4006FC857 /* AutocompleteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0226D2C0F13A4006FC857 /* AutocompleteResult.swift */; };
+		7CC022712C0F186C006FC857 /* BreweryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC022702C0F186C006FC857 /* BreweryDetailsView.swift */; };
+		7CC022732C0F1B5A006FC857 /* SingleBreweryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC022722C0F1B5A006FC857 /* SingleBreweryInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		7CC022562C0F0FDF006FC857 /* brewery-apiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "brewery-apiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC0225A2C0F0FDF006FC857 /* brewery_apiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brewery_apiUITests.swift; sourceTree = "<group>"; };
 		7CC0225C2C0F0FDF006FC857 /* brewery_apiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brewery_apiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7CC0226A2C0F10C1006FC857 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		7CC0226D2C0F13A4006FC857 /* AutocompleteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteResult.swift; sourceTree = "<group>"; };
+		7CC022702C0F186C006FC857 /* BreweryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryDetailsView.swift; sourceTree = "<group>"; };
+		7CC022722C0F1B5A006FC857 /* SingleBreweryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleBreweryInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,9 @@
 		7CC0223E2C0F0FDC006FC857 /* brewery-api */ = {
 			isa = PBXGroup;
 			children = (
+				7CC0226F2C0F1855006FC857 /* Views */,
+				7CC0226C2C0F1397006FC857 /* Models */,
+				7CC022692C0F10A6006FC857 /* Managers */,
 				7CC0223F2C0F0FDC006FC857 /* brewery_apiApp.swift */,
 				7CC022412C0F0FDC006FC857 /* ContentView.swift */,
 				7CC022432C0F0FDF006FC857 /* Assets.xcassets */,
@@ -125,6 +136,31 @@
 				7CC0225C2C0F0FDF006FC857 /* brewery_apiUITestsLaunchTests.swift */,
 			);
 			path = "brewery-apiUITests";
+			sourceTree = "<group>";
+		};
+		7CC022692C0F10A6006FC857 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7CC0226A2C0F10C1006FC857 /* ApiManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7CC0226C2C0F1397006FC857 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7CC0226D2C0F13A4006FC857 /* AutocompleteResult.swift */,
+				7CC022722C0F1B5A006FC857 /* SingleBreweryInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7CC0226F2C0F1855006FC857 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CC022702C0F186C006FC857 /* BreweryDetailsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CC0226E2C0F13A4006FC857 /* AutocompleteResult.swift in Sources */,
 				7CC022422C0F0FDC006FC857 /* ContentView.swift in Sources */,
+				7CC022732C0F1B5A006FC857 /* SingleBreweryInfo.swift in Sources */,
+				7CC0226B2C0F10C1006FC857 /* ApiManager.swift in Sources */,
 				7CC022402C0F0FDC006FC857 /* brewery_apiApp.swift in Sources */,
+				7CC022712C0F186C006FC857 /* BreweryDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

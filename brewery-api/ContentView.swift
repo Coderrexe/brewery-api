@@ -8,14 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var search: String = ""
+    
+    @State private var results: [AutocompleteResult] = []
+    
+    @ObservedObject var apiManager = ApiManager.shared
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            TextField("Enter a search item", text: $search)
+                .onChange(of: search) { oldValue, newValue in
+                    print("New value is: \(newValue)")
+                    apiManager.searchFor(query: newValue) { results in
+                        self.results = results
+                    }
+                }
+            
+            Text("Api Results: ")
+            
+            List {
+                ForEach(results, id: \.id) {result in
+                    NavigationLink(result.name) {
+                        BreweryDetailsView(breweryId: result.id)
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
